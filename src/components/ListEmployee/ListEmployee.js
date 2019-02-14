@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-// import { employees } from './mockData';
 import Employee from './Employee';
 import PopupEmployee from './PopupEmployee';
 
 import { connect } from 'react-redux'
-import axios from 'axios';
 import * as actions from './../../redux/Employee/actions'
 
 class ListEmployee extends Component {
@@ -39,9 +37,6 @@ class ListEmployee extends Component {
     });
   }
   openEditPopup = (id) => {
-    // const _employeeEditing=this.props.employees.filter((item,index)=>{
-    //   return item.Id===id
-    // })[0];
     this.props.onGetEmployeeById(id);
     this.setState({
       add0edit1: 1,
